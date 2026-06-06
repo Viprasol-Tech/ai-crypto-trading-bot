@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ai-crypto-trading-bot"
-version = "0.1.0"
+version = "0.2.0"
 description = "AI-driven cryptocurrency trading bot — feature engineering, alpha scoring and Kelly sizing. By Viprasol Tech."
 readme = "README.md"
 requires-python = ">=3.11"
