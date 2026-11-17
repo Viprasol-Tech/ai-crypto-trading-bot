@@ -80,7 +80,12 @@ Sample report:
 
 ```python
 from ai_crypto_trading_bot import (
-    CostModel, EngineConfig, EnsembleAlpha, LinearAlpha, LogisticAlpha, run_backtest,
+    CostModel,
+    EngineConfig,
+    EnsembleAlpha,
+    LinearAlpha,
+    LogisticAlpha,
+    run_backtest,
 )
 
 prices = [...]  # your OHLC close series
@@ -105,6 +110,7 @@ Plug in your own model by implementing one method:
 ```python
 from ai_crypto_trading_bot.alpha.model import AlphaModel
 from ai_crypto_trading_bot.features.engineering import Features
+
 
 class MyModel(AlphaModel):
     def score(self, features: Features) -> float:
