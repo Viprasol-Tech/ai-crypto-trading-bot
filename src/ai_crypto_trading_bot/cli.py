@@ -50,7 +50,7 @@ def _build_model(choice: ModelChoice) -> LinearAlpha | LogisticAlpha | EnsembleA
 def _synthetic_prices(n: int = 400, seed: int = 7) -> list[float]:
     """Trending sine wave plus reproducible noise (crypto-like)."""
     rng = np.random.default_rng(seed)
-    noise = rng.normal(0.0, 0.6, size=n).cumsum()
+    noise = np.cumsum(rng.normal(0.0, 0.6, size=n))
     return [100.0 + i * 0.05 + 12.0 * math.sin(i / 15.0) + noise[i] for i in range(n)]
 
 
